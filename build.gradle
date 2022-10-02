@@ -15,24 +15,12 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-starter-logging'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
 
 	implementation 'org.springframework.data:spring-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
-	implementation 'org.springframework:spring-jdbc'
-	implementation 'org.apache.commons:commons-dbcp2'
-	implementation 'org.apache.commons:commons-lang3'
-	implementation 'org.apache.commons:commons-email'
-
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
 	runtimeOnly 'mysql:mysql-connector-java:8.0.25'
-	implementation 'org.mybatis.dynamic-sql:mybatis-dynamic-sql'
-	implementation 'org.mybatis:mybatis'
-	implementation 'org.mybatis:mybatis-spring'
-
-	implementation 'mysql:mysql-connector-java:commons-dbcp2'
 
 	implementation 'org.projectlombok:lombok'
 
