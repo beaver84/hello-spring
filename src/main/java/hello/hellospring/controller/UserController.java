@@ -5,6 +5,7 @@ import hello.hellospring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +22,17 @@ public class UserController {
         ResponseDTO responseDTO = new ResponseDTO();
         responseDTO.setResultCode("S0001");
         responseDTO.setRes(userService.findAll());
+        return new ResponseEntity<>(responseDTO, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "findById/{id}", method = RequestMethod.GET)
+    public ResponseEntity<?> findAll(
+        @PathVariable(name = "id")
+        long id
+    ) {
+        ResponseDTO responseDTO = new ResponseDTO();
+        responseDTO.setResultCode("S0001");
+        responseDTO.setRes(userService.findById(id));
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
     }
 }
